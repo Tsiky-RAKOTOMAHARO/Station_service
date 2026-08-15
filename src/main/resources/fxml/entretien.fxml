@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.station.controller.EntretienController"
+      spacing="15">
+    <HBox spacing="10">
+        <ComboBox fx:id="cbClient" promptText="Sélectionner un client"/>
+        <ComboBox fx:id="cbService" promptText="Sélectionner un service"/>
+        <TextField fx:id="txtImmatriculation" promptText="Immatriculation"/>
+        <Button text="Enregistrer l'entretien" fx:id="btnEnregistrer" onAction="#handleEnregistrerEntretien"/>
+        <Button text="Générer reçu PDF" fx:id="btnGenererRecu" onAction="#handleGenererRecuPdf"/>
+    </HBox>
+    <TableView fx:id="tableEntretiens" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colNumEntr" text="N° Entretien"/>
+            <TableColumn fx:id="colClient" text="Client"/>
+            <TableColumn fx:id="colService" text="Service"/>
+            <TableColumn fx:id="colImmat" text="Immatriculation"/>
+            <TableColumn fx:id="colMontant" text="Montant Total"/>
+            <TableColumn fx:id="colDate" text="Date"/>
+        </columns>
+    </TableView>
+</VBox>

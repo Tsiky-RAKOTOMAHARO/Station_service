@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.station.controller.StockController"
+      spacing="15">
+    <HBox spacing="10">
+        <ComboBox fx:id="cbProduitEntree" promptText="Sélectionner un produit"/>
+        <TextField fx:id="txtQuantiteAjoutee" promptText="Quantité à ajouter (litres)"/>
+        <Button text="Ajouter au stock" fx:id="btnAjouterStock" onAction="#handleAjouterStock"/>
+    </HBox>
+    <TableView fx:id="tableStocks" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colNumProd" text="N° Produit"/>
+            <TableColumn fx:id="colDesignation" text="Désignation"/>
+            <TableColumn fx:id="colPrixUnitaire" text="Prix Unitaire Actuel"/>
+            <TableColumn fx:id="colStockActuel" text="Stock Actuel (L)"/>
+        </columns>
+    </TableView>
+</VBox>

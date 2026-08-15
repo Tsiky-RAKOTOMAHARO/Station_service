@@ -8,34 +8,37 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
-public class VenteController {
+public class EntretienController {
 
     @FXML
     private ComboBox<?> cbClient;
 
     @FXML
-    private ComboBox<?> cbProduit;
+    private ComboBox<?> cbService;
 
     @FXML
-    private TextField txtNbrLitre;
+    private TextField txtImmatriculation;
 
     @FXML
     private Button btnEnregistrer;
 
     @FXML
-    private TableView<?> tableVentes;
+    private Button btnGenererRecu;
 
     @FXML
-    private TableColumn<?, ?> colNumAchat;
+    private TableView<?> tableEntretiens;
+
+    @FXML
+    private TableColumn<?, ?> colNumEntr;
 
     @FXML
     private TableColumn<?, ?> colClient;
 
     @FXML
-    private TableColumn<?, ?> colProduit;
+    private TableColumn<?, ?> colService;
 
     @FXML
-    private TableColumn<?, ?> colNbrLitre;
+    private TableColumn<?, ?> colImmat;
 
     @FXML
     private TableColumn<?, ?> colMontant;
@@ -44,6 +47,10 @@ public class VenteController {
     private TableColumn<?, ?> colDate;
 
     @FXML
-    public void handleEnregistrerAchat(ActionEvent event) {
+    public void handleEnregistrerEntretien(ActionEvent event) {
+    }
+
+    @FXML
+    public void handleGenererRecuPdf(ActionEvent event) {
     }
 }

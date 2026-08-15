@@ -1,16 +1,19 @@
 package com.station.database;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
 
-    private static final String DB_HOST = System.getenv().getOrDefault("DB_HOST", "localhost");
-    private static final String DB_PORT = System.getenv().getOrDefault("DB_PORT", "5432");
-    private static final String DB_NAME = System.getenv().getOrDefault("DB_NAME", "station_service");
-    private static final String DB_USER = System.getenv().getOrDefault("DB_USER", "postgres");
-    private static final String DB_PASSWORD = System.getenv().getOrDefault("DB_PASSWORD", "postgres");
+    private static final Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
+    
+    private static final String DB_HOST = dotenv.get("DB_HOST", "localhost");
+    private static final String DB_PORT = dotenv.get("DB_PORT", "5432");
+    private static final String DB_NAME = dotenv.get("DB_NAME", "station_service");
+    private static final String DB_USER = dotenv.get("DB_USER", "postgres");
+    private static final String DB_PASSWORD = dotenv.get("DB_PASSWORD", "postgres");
 
     private static final String DB_URL =
             "jdbc:postgresql://" + DB_HOST + ":" + DB_PORT + "/" + DB_NAME;

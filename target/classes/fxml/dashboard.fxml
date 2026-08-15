@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.station.controller.MainController"
+      spacing="15">
+    <HBox spacing="20">
+        <VBox spacing="5">
+            <Label text="Recette Totale Accumulée"/>
+            <Label fx:id="lblRecetteTotale" text="0"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Alertes Stock (&lt; 10L)"/>
+            <Label fx:id="lblAlertesStock" text="Aucune alerte"/>
+        </VBox>
+    </HBox>
+    <HBox spacing="20" VBox.vgrow="ALWAYS">
+        <BarChart fx:id="chartRecettesMois" title="Recettes par Mois" HBox.hgrow="ALWAYS">
+            <xAxis>
+                <CategoryAxis fx:id="xAxisMois"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxisMontant"/>
+            </yAxis>
+        </BarChart>
+        <VBox spacing="10" HBox.hgrow="ALWAYS">
+            <Label text="Top 5 des Clients Participatifs"/>
+            <TableView fx:id="tableTopClients" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colNomClient" text="Client"/>
+                    <TableColumn fx:id="colTotalDepense" text="Total Participations"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </HBox>
+</VBox>
