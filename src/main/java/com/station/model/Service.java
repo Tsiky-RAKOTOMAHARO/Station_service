@@ -1,4 +1,4 @@
-package main.java.com.station.model;
+package com.station.model;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package main.java.com.station.dao;
+package com.station.dao;
 
 import com.station.database.DatabaseConnection;
 import com.station.model.Entree;

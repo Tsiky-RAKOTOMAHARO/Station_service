@@ -1,4 +1,4 @@
-package main.java.com.station.database;
+package com.station.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
