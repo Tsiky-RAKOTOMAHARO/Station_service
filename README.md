@@ -52,3 +52,39 @@
 
 * **Étape 6.1 :** Tests fonctionnels complets.
 * **Étape 6.2 :** Optimisation du code et mise en place de la gestion des erreurs (contrôle de saisie, validation des champs).
+
+
+# Organisation des dossiers
+
+````
+.
+├── pom.xml
+├── README.md
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── station
+│   │   │           ├── controller
+│   │   │           │   ├── MainController.java
+│   │   │           │   ├── StockController.java
+│   │   │           │   └── VenteController.java
+│   │   │           ├── dao
+│   │   │           │   ├── ClientDao.java
+│   │   │           │   └── ProduitDao.java
+│   │   │           ├── database
+│   │   │           │   └── DatabaseConnection.java
+│   │   │           ├── Main.java
+│   │   │           ├── model
+│   │   │           └── service
+│   │   │               └── PdfGenerator.java
+│   │   └── resources
+│   │       ├── css
+│   │       │   └── style.css
+│   │       ├── fxml
+│   │       │   ├── dashboard.fxml
+│   │       │   ├── stocks.fxml
+│   │       │   └── ventes.fxml
+│   │       └── images
+│   └── test
+└── station_service.md
