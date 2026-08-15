@@ -58,6 +58,10 @@
 
 ````
 .
+├── docker
+│   ├── dataExample.sql
+│   ├── docker-compose.yml
+│   └── init.sql
 ├── pom.xml
 ├── README.md
 ├── src
@@ -76,6 +80,12 @@
 │   │   │           │   └── DatabaseConnection.java
 │   │   │           ├── Main.java
 │   │   │           ├── model
+│   │   │           │   ├── Achat.java
+│   │   │           │   ├── Client.java
+│   │   │           │   ├── Entree.java
+│   │   │           │   ├── Entretien.java
+│   │   │           │   ├── Produit.java
+│   │   │           │   └── Service.java
 │   │   │           └── service
 │   │   │               └── PdfGenerator.java
 │   │   └── resources
@@ -88,3 +98,4 @@
 │   │       └── images
 │   └── test
 └── station_service.md
+
